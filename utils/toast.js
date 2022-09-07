@@ -2,7 +2,7 @@ function toast(title, duration = 3000) {
   uni.showToast({
     title,
     icon: "none",
-  	 duration
+    duration
   })
 }
 
@@ -18,6 +18,14 @@ toast.success = function(title, duration = 3000) {
   uni.showToast({
     title,
     icon: 'success',
+    duration
+  })
+}
+
+toast.loading = function(title, duration = 3000) {
+  uni.showToast({
+    title,
+    icon: 'loading',
     duration
   })
 }
