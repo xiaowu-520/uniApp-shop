@@ -9,7 +9,8 @@
     {
       "root": "subpkgs",
       "pages": [
-        "goods-detail/goods-detail"
+        "goods-detail/goods-detail",
+        "goods-list/goods-list"
       ]
     }
   ],
@@ -17,7 +18,8 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "优购商城",
     "navigationBarBackgroundColor": "#c00000",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#FFFFFF",
+    "ignoreDevUnusedFiles": false
   },
   "tabBar": {
     "selectedColor": "#c00000",
@@ -48,5 +50,8 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant/button/index",
+    "van-card": "/wxcomponents/vant/card/index"
+  }
 }

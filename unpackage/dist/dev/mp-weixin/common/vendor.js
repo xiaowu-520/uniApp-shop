@@ -2629,62 +2629,28 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 18:
+/***/ 12:
+/*!********************************************************************!*\
+  !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/filters/index.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.toFixed = toFixed;function toFixed(num) {
+  return Number(num).toFixed(2);
+}
+
+/***/ }),
+
+/***/ 19:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 19);
-
-/***/ }),
-
-/***/ 19:
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 20);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
+module.exports = __webpack_require__(/*! regenerator-runtime */ 20);
 
 /***/ }),
 
@@ -2720,6 +2686,54 @@ module.exports = g;
 /***/ }),
 
 /***/ 20:
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 21);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+
+/***/ 21:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -3451,7 +3465,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /*!***************************************************************!*\
   !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/api/home.js ***!
   \***************************************************************/
@@ -3459,7 +3473,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getFloor = exports.getNavList = exports.getBanners = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 51));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.getFloor = exports.getNavList = exports.getBanners = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var getBanners = function getBanners() {return _request.default.get('/home/swiperdata');};
 /**
@@ -3472,6 +3486,57 @@ exports.getNavList = getNavList;var getFloor = function getFloor() {return _requ
 /***/ }),
 
 /***/ 23:
+/*!********************************************************************!*\
+  !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/utils/request.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _toast = _interopRequireDefault(__webpack_require__(/*! @/utils/toast.js */ 24));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var Fly = __webpack_require__(/*! flyio/dist/npm/wx */ 25);
+var fly = new Fly();
+
+fly.config.baseURL = 'https://api-hmugo-web.itheima.net/api/public/v1';
+fly.config.timeout = 3000;
+//添加请求拦截器
+fly.interceptors.request.use(function (request) {
+  _toast.default.loading('正在加载中...');
+  //给所有请求添加自定义header
+  // console.log('加载');
+  request.headers["X-Tag"] = "flyio";
+  //打印出请求体
+  // console.log(request.body)
+  //终止请求
+  //var err=new Error("xxx")
+  //err.request=request
+  //return Promise.reject(new Error(""))
+
+  //可以显式返回request, 也可以不返回，没有返回值时拦截器中默认返回request
+  return request;
+});
+
+//添加响应拦截器，响应拦截器会在then/catch处理之前执行
+fly.interceptors.response.use(
+function (response) {
+  //只将请求结果的data字段返回
+  uni.hideToast();
+  return response.data.message;
+},
+function (err) {
+  //发生网络错误后会走到这里
+  _toast.default.err('网络错误');
+  //return Promise.resolve("ssss")
+});var _default =
+
+
+
+fly;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 24:
 /*!******************************************************************!*\
   !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/utils/toast.js ***!
   \******************************************************************/
@@ -3501,13 +3566,21 @@ toast.success = function (title) {var duration = arguments.length > 1 && argumen
     icon: 'success',
     duration: duration });
 
+};
+
+toast.loading = function (title) {var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
+  uni.showToast({
+    title: title,
+    icon: 'loading',
+    duration: duration });
+
 };var _default =
 toast;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /*!*******************************************!*\
   !*** ./node_modules/flyio/dist/npm/wx.js ***!
   \*******************************************/
@@ -10840,50 +10913,18 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 51:
-/*!********************************************************************!*\
-  !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/utils/request.js ***!
-  \********************************************************************/
+/***/ 58:
+/*!****************************************************************!*\
+  !*** C:/Users/10594/Desktop/黑马文件/uniApp/uni-shop/api/goods.js ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _toast = _interopRequireDefault(__webpack_require__(/*! @/utils/toast.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-var Fly = __webpack_require__(/*! flyio/dist/npm/wx */ 24);
-var fly = new Fly();
+Object.defineProperty(exports, "__esModule", { value: true });exports.getGoodsList = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
-fly.config.baseURL = 'https://api-hmugo-web.itheima.net/api/public/v1';
-fly.config.timeout = 3000;
-//添加请求拦截器
-fly.interceptors.request.use(function (request) {
-  //给所有请求添加自定义header
-  request.headers["X-Tag"] = "flyio";
-  //打印出请求体
-  // console.log(request.body)
-  //终止请求
-  //var err=new Error("xxx")
-  //err.request=request
-  //return Promise.reject(new Error(""))
-
-  //可以显式返回request, 也可以不返回，没有返回值时拦截器中默认返回request
-  return request;
-});
-
-//添加响应拦截器，响应拦截器会在then/catch处理之前执行
-fly.interceptors.response.use(
-function (response) {
-  //只将请求结果的data字段返回
-  return response.data.message;
-},
-function (err) {
-  //发生网络错误后会走到这里
-  _toast.default.err('网络错误');
-  //return Promise.resolve("ssss")
-});var _default =
-
-
-
-fly;exports.default = _default;
+// 获取商品数据
+var getGoodsList = function getGoodsList(data) {return _request.default.get('/goods/search', data);};exports.getGoodsList = getGoodsList;
 
 /***/ })
 

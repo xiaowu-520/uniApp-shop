@@ -37,6 +37,14 @@
     "root": "subpkgs",
     "pages": [{
       "path": "goods-detail/goods-detail"
+    }, {
+      "path": "goods-list/goods-list",
+      "style": {
+        "navigationBarTitleText": "",
+        "onReachBottomDistance": 150,
+        "enablePullDownRefresh": true
+      }
+
     }]
   }],
   "tabBar": {
@@ -71,7 +79,12 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "优购商城",
     "navigationBarBackgroundColor": "#c00000",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#FFFFFF",
+    "usingComponents": {
+      "van-button": "/wxcomponents/vant/button/index",
+      "van-card": "/wxcomponents/vant/card/index"
+    },
+    "ignoreDevUnusedFiles": false
   },
   "uniIdRouter": {},
   "condition": { //模式配置，仅开发期间生效

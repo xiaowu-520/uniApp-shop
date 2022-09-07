@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "onReachBottomDistance": 150,
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}
